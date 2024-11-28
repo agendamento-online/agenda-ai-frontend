@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import Avatar from '../Avatar/Avatar';
+import Avatar from '../Avatar/Avatar.jsx';
 import './Cabecalho.css';
-import ServicoAutenticacao from '../../servicos/ServicoAutenticacao';
+import ServicoAutenticacao from '../../servicos/ServicoAutenticacao.js';
 
 const instanciaServicoAutenticacao = new ServicoAutenticacao();
 

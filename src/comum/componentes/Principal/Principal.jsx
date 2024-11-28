@@ -1,8 +1,8 @@
 import { FaChevronLeft } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-import Cabecalho from '../Cabecalho/Cabecalho';
+import Cabecalho from '../Cabecalho/Cabecalho.jsx';
 import './Principal.css';
-import Rodape from '../Rodape/Rodape';
+import Rodape from '../Rodape/Rodape.jsx';
 
 function Principal({ voltarPara, titulo, children }) {
   return (

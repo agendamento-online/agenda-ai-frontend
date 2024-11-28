@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado';
-import Principal from '../../comum/componentes/Principal/Principal';
-import ServicoAutenticacao from '../../comum/servicos/ServicoAutenticacao';
+import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado.jsx';
+import Principal from '../../comum/componentes/Principal/Principal.jsx';
+import ServicoAutenticacao from '../../comum/servicos/ServicoAutenticacao.js';
 
 const instanciaServicoAutenticacao = new ServicoAutenticacao();
 

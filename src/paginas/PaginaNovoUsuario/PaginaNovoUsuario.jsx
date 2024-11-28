@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Principal from '../../comum/componentes/Principal/Principal';
-import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado';
+import Principal from '../../comum/componentes/Principal/Principal.jsx';
+import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado.jsx';
 import { toast } from 'react-toastify';
-import ServicoUsuarios from '../../comum/servicos/ServicoUsuarios';
+import ServicoUsuarios from '../../comum/servicos/ServicoUsuarios.js';
 import { useNavigate } from 'react-router-dom';
 
 const instanciaServicoUsuarios = new ServicoUsuarios();

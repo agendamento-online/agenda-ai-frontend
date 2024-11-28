@@ -3,13 +3,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
-import VerificarAutenticacao from './comum/componentes/VerificarAutenticacao/VerificarAutenticacao';
-import PaginaCadastroCliente from './paginas/PaginaCadastroCliente/PaginaCadastroCliente';
-import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
-import PaginaListaClientes from './paginas/PaginaListaClientes/PaginaListaClientes';
-import PaginaLogin from './paginas/PaginaLogin/PaginaLogin';
-import PaginaMeuPerfil from './paginas/PaginaMeuPerfil/PaginaMeuPerfil';
-import PaginaNovoUsuario from './paginas/PaginaNovoUsuario/PaginaNovoUsuario';
+import VerificarAutenticacao from './comum/componentes/VerificarAutenticacao/VerificarAutenticacao.jsx';
+import PaginaCadastroCliente from './paginas/PaginaCadastroCliente/PaginaCadastroCliente.jsx';
+import PaginaInicial from './paginas/PaginaInicial/PaginaInicial.jsx';
+import PaginaListaClientes from './paginas/PaginaListaClientes/PaginaListaClientes.jsx';
+import PaginaLogin from './paginas/PaginaLogin/PaginaLogin.jsx';
+import PaginaMeuPerfil from './paginas/PaginaMeuPerfil/PaginaMeuPerfil.jsx';
+import PaginaNovoUsuario from './paginas/PaginaNovoUsuario/PaginaNovoUsuario.jsx';
 
 const router = createBrowserRouter([
   {

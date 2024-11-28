@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-import Principal from '../../comum/componentes/Principal/Principal';
-import ServicoCliente from '../../comum/servicos/ServicoCliente';
+import Principal from '../../comum/componentes/Principal/Principal.jsx';
+import ServicoCliente from '../../comum/servicos/ServicoCliente.js';
 import './PaginaListaClientes.css';
 
 const instanciaServicoCliente = new ServicoCliente();

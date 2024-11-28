@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado';
-import Principal from '../../comum/componentes/Principal/Principal';
-import ServicoCliente from '../../comum/servicos/ServicoCliente';
-import { formatarComMascara, MASCARA_CELULAR, MASCARA_CEP, MASCARA_CPF } from '../../comum/utils/mascaras';
+import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado.jsx';
+import Principal from '../../comum/componentes/Principal/Principal.jsx';
+import ServicoCliente from '../../comum/servicos/ServicoCliente.js';
+import { formatarComMascara, MASCARA_CELULAR, MASCARA_CEP, MASCARA_CPF } from '../../comum/utils/mascaras.js';
 import './PaginaCadastroCliente.css';
 import axios from 'axios';
 

@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado';
-import Principal from '../../comum/componentes/Principal/Principal';
-import ServicoAutenticacao from '../../comum/servicos/ServicoAutenticacao';
-import Avatar from '../../comum/componentes/Avatar/Avatar';
+import BotaoCustomizado from '../../comum/componentes/BotaoCustomizado/BotaoCustomizado.jsx';
+import Principal from '../../comum/componentes/Principal/Principal.jsx';
+import ServicoAutenticacao from '../../comum/servicos/ServicoAutenticacao.js';
+import Avatar from '../../comum/componentes/Avatar/Avatar.jsx';
 import { useState } from 'react';
 
 const instanciaServicoAutenticacao = new ServicoAutenticacao();

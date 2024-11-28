@@ -1,4 +1,4 @@
-import instanciaApi from './Api';
+import instanciaApi from './Api.js';
 
 class ServicoAutenticacao {
   async login(email, senha) {
