@@ -14,8 +14,8 @@ export default defineConfig({
         'apple-touch-icon.png',
       ],
       manifest: {
-        name: 'Aulas Frontend com ReactJS + PWA',
-        short_name: 'Aulas Frontend PWA',
+        name: 'Agenda Ai!',
+        short_name: 'Agenda Ai!',
         description: 'É um projeto para...',
         theme_color: '#ffffff',
         background_color: '#ffffff',
