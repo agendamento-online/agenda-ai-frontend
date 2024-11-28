@@ -8,7 +8,6 @@ const PaginaInicial = () => {
 
   return (
     <Principal titulo="Página Inicial">
-      <BotaoCustomizado aoClicar={() => navigate('/lista-produtos')}>Lista Produtos</BotaoCustomizado>
 
       <BotaoCustomizado cor="primaria" aoClicar={() => navigate('/lista-clientes')}>
         Lista de Clientes
