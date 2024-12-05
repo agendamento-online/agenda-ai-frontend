@@ -1,21 +1,24 @@
-import instanciaApi from './Api.js';
+import instanciaApi from "./Api.js";
 
 class ServicoCliente {
   listar() {
-    return instanciaApi.get('/usuarios');
+    return instanciaApi.get("/clientes");
   }
 
-  cadastrarCliente(novoCliente) {
-    const clientesDoLocalStorage = this.listar();
-    clientesDoLocalStorage.push(novoCliente);
-    localStorage.setItem('lista-clientes', JSON.stringify(clientesDoLocalStorage));
+  cadastrarCliente() {
+    return instanciaApi.post('/clientes');
   }
 
   editarCliente(cliente) {
     const clientesDoLocalStorage = this.listar();
-    const indexCliente = clientesDoLocalStorage.findIndex((c) => c.id === +cliente.id);
+    const indexCliente = clientesDoLocalStorage.findIndex(
+      (c) => c.id === +cliente.id
+    );
     clientesDoLocalStorage[indexCliente] = cliente;
-    localStorage.setItem('lista-clientes', JSON.stringify(clientesDoLocalStorage));
+    localStorage.setItem(
+      "lista-clientes",
+      JSON.stringify(clientesDoLocalStorage)
+    );
   }
 
   buscarPorId(idCliente) {
@@ -30,7 +33,7 @@ class ServicoCliente {
       return c.id !== idCliente;
     });
 
-    localStorage.setItem('lista-clientes', JSON.stringify(listaAtualizada));
+    localStorage.setItem("lista-clientes", JSON.stringify(listaAtualizada));
     return listaAtualizada;
   }
 }

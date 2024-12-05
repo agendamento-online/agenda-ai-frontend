@@ -1,8 +1,8 @@
 .botao-customizado_root {
-  padding: 16px;
+  padding: 10px;
   border: none;
 
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.8;
   cursor: pointer;
   color: var(--cor-texto-claro);
@@ -14,13 +14,13 @@
 }
 
 .botao-customizado_primario {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-primaria-clara);
 }
 
 .botao-customizado_secundario {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-secundaria-clara);
 }
 
 .botao-customizado_padrao {
-  background-color: var(--cor-cinza);
+  background-color: var(--cor-primaria-escura);
 }
