@@ -1,7 +1,14 @@
 .rodape_root {
   height: 48px;
-  background-color: var(--cor-cinza);
+  background-color: var(--cor-primaria-clara);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.link_campo{
+  color: var(--cor-texto-claro);
+  font-size: 100%;
 }

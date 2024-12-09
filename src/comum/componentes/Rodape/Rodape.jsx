@@ -1,13 +1,20 @@
-import { Link } from 'react-router-dom';
-import './Rodape.css';
+import { Link } from "react-router-dom";
+import "./Rodape.css";
 
 function Rodape() {
-
   return (
     <footer className="rodape_root">
-      <Link to={"/cadastro-cliente"}>Novo Cliente</Link>
-      <Link to={"/lista-tarefas"}>Lista de Tarefas</Link>
-      <Link to={"/lista-clientes"}>Meu Clientes</Link>
+      <Link className="link_campo" to={"/cadastro-cliente"}>
+        <h3>
+        Novo Cliente
+        </h3>
+      </Link>
+      <Link className="link_campo" to={"/novo-agendamento"}>
+        <h3>Agendar</h3>
+      </Link>
+      <Link className="link_campo" to={"/lista-clientes"}>
+        <h3>Meu Clientes</h3>
+      </Link>
     </footer>
   );
 }

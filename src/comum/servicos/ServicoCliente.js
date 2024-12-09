@@ -5,8 +5,8 @@ class ServicoCliente {
     return instanciaApi.get("/clientes");
   }
 
-  cadastrarCliente() {
-    return instanciaApi.post('/clientes');
+  cadastrarCliente(novoCliente) {
+    return instanciaApi.post('/clientes', novoCliente);
   }
 
   editarCliente(cliente) {

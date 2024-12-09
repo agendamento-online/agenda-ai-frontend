@@ -10,6 +10,7 @@ import PaginaListaClientes from './paginas/PaginaListaClientes/PaginaListaClient
 import PaginaLogin from './paginas/PaginaLogin/PaginaLogin.jsx';
 import PaginaMeuPerfil from './paginas/PaginaMeuPerfil/PaginaMeuPerfil.jsx';
 import PaginaNovoUsuario from './paginas/PaginaNovoUsuario/PaginaNovoUsuario.jsx';
+import PaginaAgendamentos from './paginas/PaginaAgendamentos/PaginaAgendamentos.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: 'meu-perfil',
         element: <PaginaMeuPerfil />,
+      },
+      {
+        path: 'novo-agendamento',
+        element: <PaginaAgendamentos />,
       },
     ],
   },
