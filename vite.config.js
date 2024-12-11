@@ -17,8 +17,8 @@ export default defineConfig({
         name: 'Agenda Ai!',
         short_name: 'Agenda Ai!',
         description: 'É um projeto para...',
-        theme_color: '#fffff',
-        background_color: '#fffff',
+        theme_color: '#ADD8E6',
+        background_color: '#ADD8E6',
         display: 'standalone',
         icons: [
           {
@@ -27,7 +27,7 @@ export default defineConfig({
             type: 'image/png',
           },
           {
-            src: 'icons/agenda-ai-logo.png',
+            src: 'icons/agenda-ai.png',
             sizes: '512x512',
             type: 'image/png',
           },
