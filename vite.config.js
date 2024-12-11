@@ -27,9 +27,9 @@ export default defineConfig({
             type: 'image/png',
           },
           {
-            src: 'icons/agenda-ai-logo.jpg',
-            sizes: '542x388',
-            type: 'image/jpg',
+            src: 'icons/agenda-ai-logo.png',
+            sizes: '512x512',
+            type: 'image/png',
           },
         ],
       },

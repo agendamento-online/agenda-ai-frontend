@@ -2,7 +2,7 @@
   height: 48px;
   background-color: var(--cor-primaria-clara);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -11,4 +11,6 @@
 .link_campo{
   color: var(--cor-texto-claro);
   font-size: 100%;
+  margin-left: 3px;
+  margin-right: 3px;
 }
