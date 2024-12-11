@@ -2,8 +2,8 @@ import axios from 'axios';
 import ServicoAutenticacao from './ServicoAutenticacao.js';
 
 const instanciaApi = axios.create({
-  // baseURL: 'http://localhost:3000',
-  baseURL: 'https://agenda-ai-api.onrender.com',
+  baseURL: 'http://localhost:3000',
+  // baseURL: 'https://agenda-ai-api.onrender.com',;
 });
 
 instanciaApi.interceptors.request.use((config) => {

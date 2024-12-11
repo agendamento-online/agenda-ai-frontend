@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         element: <PaginaMeuPerfil />,
       },
       {
-        path: 'novo-agendamento',
+        path: 'novo-agendamento/:id?',
         element: <PaginaAgendamentos />,
       },
     ],

@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import Principal from "../../comum/componentes/Principal/Principal";
-import instanciaApi from "../../comum/servicos/Api";
+import Principal from "../../comum/componentes/Principal/Principal.jsx";
+import instanciaApi from "../../comum/servicos/Api.js";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import BotaoCustomizado from "../../comum/componentes/BotaoCustomizado/BotaoCustomizado";
+import BotaoCustomizado from "../../comum/componentes/BotaoCustomizado/BotaoCustomizado.jsx";
 
 const PaginaAgendamentos = () => {
   const [listaClientes, setListaClientes] = useState([]);
   const [clienteSelecionado, setClienteSelecionado] = useState("");
   const [data, setData] = useState("");
-  const [tempo, setTempo] = useState("");
+  const [horario, setHorario] = useState("");
   const [servico, setServico] = useState("");
 
   const params = useParams();
@@ -28,32 +28,60 @@ const PaginaAgendamentos = () => {
     buscarClientes();
   }, []);
 
+  useEffect(() => {
+    const buscarAgendamento = async () => {
+      if (params.id) {
+        const response = await instanciaApi.get("/agendamentos/" + params.id);
+
+        if (response.data) {
+          setClienteSelecionado(response.data.cliente_id);
+          setData(response.data.data_servico);
+          setHorario(response.data.horario);
+          setServico(response.data.servico);
+        }
+      }
+    };
+
+    buscarAgendamento();
+  }, [params.id]);
+
   const salvar = async () => {
-    if (!clienteSelecionado || !data || !tempo || !servico) {
+    if (!clienteSelecionado || !data || !horario || !servico) {
       toast.error("Preencha todos os campos obrigatórios!");
       return;
     }
 
     const agendamento = {
-      id: params.id,
+      id_agendamento: params.id,
       clienteSelecionado,
       data,
-      tempo,
+      horario,
       servico,
     };
 
-    if(agendamento){
+    if (!params.id) {
       await instanciaApi.post("/agendamentos", agendamento);
       toast.success("Agendamento salvo com sucesso!");
-      navigate("/");
+      navigate("/")
     } else {
-      toast.error("Erro ao salvar o agendamento.");
+      await instanciaApi.put("/agendamentos", agendamento);
+      toast.success("Agendamento atualizado.");
+      navigate("/");
     }
-    
   };
 
   return (
-    <Principal titulo={"Novo Agendamento"} voltarPara="/">
+    <Principal
+      titulo={params.id ? "Editar Agendamento" : "Novo Agendamento"}
+      voltarPara="/"
+    >
+      {params.id && (
+        <div className="campo">
+          <label>Id:</label>
+          <input type="text" value={params.id} disabled />
+        </div>
+      )}
+
       <div className="campo">
         <label>Escolha o cliente: </label>
         <select
@@ -84,8 +112,8 @@ const PaginaAgendamentos = () => {
         <label>Horário:</label>
         <input
           type="time"
-          value={tempo}
-          onChange={(e) => setTempo(e.target.value)}
+          value={horario}
+          onChange={(e) => setHorario(e.target.value)}
         />
       </div>
 
@@ -100,7 +128,7 @@ const PaginaAgendamentos = () => {
       </div>
 
       <BotaoCustomizado cor="primaria" aoClicar={salvar}>
-        Cadastrar
+        Salvar
       </BotaoCustomizado>
     </Principal>
   );

@@ -111,7 +111,7 @@ const PaginaCadastroCliente = () => {
       </div>
 
       <BotaoCustomizado cor="primaria" aoClicar={salvar}>
-        Cadastrar
+        Salvar
       </BotaoCustomizado>
     </Principal>
   );

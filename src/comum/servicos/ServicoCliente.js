@@ -9,32 +9,16 @@ class ServicoCliente {
     return instanciaApi.post('/clientes', novoCliente);
   }
 
-  editarCliente(cliente) {
-    const clientesDoLocalStorage = this.listar();
-    const indexCliente = clientesDoLocalStorage.findIndex(
-      (c) => c.id === +cliente.id
-    );
-    clientesDoLocalStorage[indexCliente] = cliente;
-    localStorage.setItem(
-      "lista-clientes",
-      JSON.stringify(clientesDoLocalStorage)
-    );
+  editarCliente( cliente) {
+    return instanciaApi.put('/clientes', cliente)
   }
 
   buscarPorId(idCliente) {
-    const clientesDoLocalStorage = this.listar();
-    return clientesDoLocalStorage.find((c) => c.id === +idCliente);
+    return instanciaApi.get(`/clientes/${idCliente}`)
   }
 
   excluirCliente(idCliente) {
-    const clientesDoLocalStorage = this.listar();
-
-    const listaAtualizada = clientesDoLocalStorage.filter((c) => {
-      return c.id !== idCliente;
-    });
-
-    localStorage.setItem("lista-clientes", JSON.stringify(listaAtualizada));
-    return listaAtualizada;
+    return instanciaApi.delete(`/clientes/${idCliente}`)
   }
 }
 

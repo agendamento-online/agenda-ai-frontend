@@ -36,7 +36,12 @@ const PaginaListaClientes = () => {
       {listaClientes.map((cliente) => {
         return (
           <div key={cliente.id_cliente} className="pagina-lista-clientes__item-cliente">
-            {cliente.nome}
+            <span>
+            <strong>Cliente: </strong>{cliente.nome}
+            </span>
+            <span>
+              <strong>Veículo: </strong>{cliente.veiculo}
+            </span>
 
             <div className="pagina-lista-clientes__item-cliente-acoes">
               <FaEdit size={24} onClick={() => navegarParaEdicao(cliente.id_cliente)} />

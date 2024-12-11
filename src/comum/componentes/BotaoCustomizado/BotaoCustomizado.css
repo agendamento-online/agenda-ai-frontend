@@ -1,12 +1,14 @@
 .botao-customizado_root {
   padding: 10px;
   border: none;
+  
 
   font-size: 12px;
   opacity: 0.8;
   cursor: pointer;
   color: var(--cor-texto-claro);
   font-weight: 400;
+  border-radius: 10px;
 }
 
 .botao-customizado_root:hover {
