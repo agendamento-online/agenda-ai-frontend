@@ -14,7 +14,7 @@ export default defineConfig({
         'apple-touch-icon.png',
       ],
       manifest: {
-        name: 'Agenda Ai!',
+        name: 'Agenda Ai! Serviços',
         short_name: 'Agenda Ai!',
         description: 'É um projeto para...',
         theme_color: '#ADD8E6',
@@ -22,12 +22,12 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: 'icons/icon-192x192.png',
+            src: 'icons/agenda-ai-icon.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: 'icons/agenda-ai.png',
+            src: 'icons/agenda-ai-logo.png',
             sizes: '512x512',
             type: 'image/png',
           },

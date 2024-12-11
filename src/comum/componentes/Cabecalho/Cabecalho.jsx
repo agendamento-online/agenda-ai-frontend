@@ -11,7 +11,7 @@ function Cabecalho() {
   return (
     <header className="cabecalho_root">
       <Link to="/">
-        <img src="/icons/agenda-ai-icon.png" height={60} />
+        <img src="/agenda-ai-icon.png" height={60} />
       </Link>
 
       <h2 className="titulo">Agenda Aí!</h2>
